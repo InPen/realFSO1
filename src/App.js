@@ -3,25 +3,22 @@ import React from "react";
 const Hello = (props) => {
   return (
     <div>
-      <p>Hello {props.name}</p>
+      <p>Hello {props.name}, you are {props.age} years old </p>
     </div>
   )
 }
 
 
 const App = () => {
-  const now = new Date()
-  const a = 18
-  const b = 8
+  const name = 'Iktan'
+  const age = 18
 
   return (
     <div>
-      <Hello name={'Han'}/>
-      <Hello name={'Inés'}/>
-      <Hello name={'Iktan'}/>
-      <p>
-        {a} plus {b} is {a + b}
-      </p>
+      <h1>Greetings!</h1>
+      <Hello name={"Han"} age={-26 + -1} />
+      <Hello name={"Inés"} age={12 / 2} />
+      <Hello name={name} age={age} />
     </div>
   );
 };
