@@ -2,6 +2,25 @@ import React from "react";
 
 const Title = ({ event }) => <h1>{event}</h1>
 
+const RCers = ({ members }) => {
+
+    return (
+      <div>
+        {members.map(({ firstName, language }, i) => (
+          <Developers
+            key={i} name={firstName} language={language}
+          />
+        ))}
+      </div>
+    );
+}
+
+const Developers = ({ firstName, language }) => (
+  <p>
+    {firstName} {language}
+  </p>
+);
+
 const Obj = () => {
   const developers = {
     event: "Resilient Coders Community Hours",
@@ -36,6 +55,7 @@ const Obj = () => {
   return (
     <div>
       <Title event={developers.event} />
+      <RCers developers={developers.members}/>
     </div>
   );
 };
