@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
-import Event from "./Event";
+import UniCafe from "./UniCafe";
 
 ReactDOM.render(
-  <Event />,
+  <UniCafe />,
   document.getElementById("root")
 );
