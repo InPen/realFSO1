@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
-import Obj from "./Obj";
+import Event from "./Event";
 
 ReactDOM.render(
-  <Obj />,
+  <Event />,
   document.getElementById("root")
 );
