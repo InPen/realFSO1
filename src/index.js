@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import Anecdotes from "./Anecdotes";
+import App from "./App";
 
 const anecdotes = [
   "If it hurts, do it more often",
@@ -11,6 +11,6 @@ const anecdotes = [
 ];
 
 ReactDOM.render(
-  <Anecdotes anecdotes={anecdotes} />,
+  <App />,
   document.getElementById("root")
 );
