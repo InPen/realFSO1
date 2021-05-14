@@ -7,11 +7,12 @@ const Counter = (props) => {
   //The counter variable is assigned the initial value of state which is zero. The variable setCounter is assigned to a function that will be used to modify the state.
   const [counter, setCounter] = useState(0);
   
-  return( 
+  return (
     <div>
       {counter}
       <button onClick={() => setCounter(counter + 1)}>Plus</button>
+      <button onClick={() => setCounter(0)}>Zero</button>
     </div>
-)};
+  );};
 
 export default Counter;
