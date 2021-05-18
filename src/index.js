@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import Counter from "./Counter";
+import State from "./State";
 
 const anecdotes = [
   "If it hurts, do it more often",
@@ -13,6 +13,6 @@ const anecdotes = [
 
 
 ReactDOM.render(
-  <Counter />,
+  <State />,
   document.getElementById("root")
 );
