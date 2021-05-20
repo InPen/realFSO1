@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import State from "./State";
+import Feedback from "./Feedback";
 
 const anecdotes = [
   "If it hurts, do it more often",
@@ -13,6 +13,6 @@ const anecdotes = [
 
 
 ReactDOM.render(
-  <State />,
+  <Feedback />,
   document.getElementById("root")
 );
