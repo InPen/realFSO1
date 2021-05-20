@@ -14,11 +14,13 @@ const Feedback = () => {
     <div>
       <h1>Give Feedback</h1>
       <Button handleClick={() => setGood(good + 1)} text="Good" />
-      <Button handleClick={() => console.log("clicked")} text="Neutral" />
-      <Button handleClick={() => console.log("clicked")} text="Bad" />
+      <Button handleClick={() => setNeutral(neutral + 1)} text="Neutral" />
+      <Button handleClick={() => setBad(bad + 1)} text="Bad" />
 
       <h2>Stats</h2>
       <p>Good : {good}</p>
+      <p>Neutral : {neutral}</p>
+      <p>Bad : {bad}</p>
     </div>
   );
 };
