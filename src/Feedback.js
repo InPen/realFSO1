@@ -16,7 +16,7 @@ const Feedback = () => {
 
 
   const total = good + neutral + bad
-  const average = total / 3
+  const average = Math.floor(total / 3)
   const positive = good + neutral 
 
   return (
@@ -31,8 +31,8 @@ const Feedback = () => {
       <p>Neutral : {neutral}</p>
       <p>Bad : {bad}</p>
       <p>Total : {total}</p>
-      <p>Average</p>
-      <p>Positive</p>
+      <p>Average : {average}</p>
+      <p>Positive : {positive}</p>
     </div>
   );
 };
