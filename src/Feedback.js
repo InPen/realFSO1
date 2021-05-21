@@ -4,7 +4,26 @@ const Button = ({ handleClick, text }) => {
   return <button onClick={handleClick}>{text}</button>;
 };
 
-
+const Statistics = ({ good, neutral, bad, total, average, positive }) => {
+  // Only display statistics when feedback is given.
+  if (total === 0) {
+    return <p>No feedback given.</p>;
+  } else {
+    return (
+      <div>
+        
+          <span text="Good" value={good} ></span>
+          <span text="Neutral" value={neutral} ></span>
+          <span text="Bad" value={bad} ></span>
+          {/* Total number of collected feedback  */}
+          <span text="All" value={total} ></span>
+          <span text="Average" value={average} ></span>
+          <span text="Positive" value={positive} ></span>
+        
+      </div>
+    );
+  }
+};
 
 
 
@@ -21,18 +40,19 @@ const Feedback = () => {
 
   return (
     <div>
-      <h1>Give Feedback</h1>
+      <h1>Give Feedback</h1>.  
       <Button handleClick={() => setGood(good + 1)} text="Good" />
       <Button handleClick={() => setNeutral(neutral + 1)} text="Neutral" />
       <Button handleClick={() => setBad(bad + 1)} text="Bad" />
-
-      <h2>Stats</h2>
-      <p>Good : {good}</p>
-      <p>Neutral : {neutral}</p>
-      <p>Bad : {bad}</p>
-      <p>Total : {total}</p>
-      <p>Average : {average}</p>
-      <p>Positive : {positive}</p>
+      <title>Stats</title>
+      <Statistics
+        good={good}
+        neutral={neutral}
+        bad={bad}
+        total={total}
+        average={average}
+        positive={positive}
+      />
     </div>
   );
 };
