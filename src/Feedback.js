@@ -7,18 +7,20 @@ const Button = ({ handleClick, text }) => {
 const Statistics = ({ good, neutral, bad, total, average, positive }) => {
   // Only display statistics when feedback is given.
   if (total === 0) {
+    console.log('if')
     return <p>No feedback given.</p>;
   } else {
+    console.log("else");
     return (
       <div>
         
-          <span text="Good" value={good} ></span>
-          <span text="Neutral" value={neutral} ></span>
-          <span text="Bad" value={bad} ></span>
+          <div>Good : {good} </div>
+          <div>Neutral : {neutral} </div>
+          <div>Bad : {bad} </div>
           {/* Total number of collected feedback  */}
-          <span text="All" value={total} ></span>
-          <span text="Average" value={average} ></span>
-          <span text="Positive" value={positive} ></span>
+          <div>Total : {total} </div>
+          <div>Average : {average} </div>
+          <div>Positive Feedback : {positive} </div>
         
       </div>
     );
